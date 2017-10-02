@@ -1,13 +1,62 @@
 @import "bourbon"
-@import "vars.sass"
+$main-color: #f39f18
+$headers-color: #2c3949
 
 body
-	font-size: 16px
+	font-size: 15px
 	min-width: 320px
 	position: relative
-	line-height: 1.6
-	font-family: "RobotoRegular", sans-serif
+	line-height: 1.375
+	font-family: "RalewayRegular", sans-serif
 	overflow-x: hidden
+	color: #333333
 
 .hidden
 	display: none
+
+a, a:hover, a:focus, a:active
+	color: $main-color
+	text-decoration: underline
+
+.headers
+	font-family: "PFCentroSlabProMedium", $helvetica
+	text-transform: uppercase
+	font-weight: normal
+	color: $headers-color
+
+h1, h2, h3, h4, h5, h6
+	@extend .headers
+
+h1
+	font-size: 3em
+
+h2
+	font-size: 2.5em
+
+h3
+	font-size: 1.5em
+
+b, strong
+	font-family: "RalewayBold", $helvetica
+
+.before
+	content: ""
+	width: 100%
+	height: 100%
+	position: absolute
+	left: 0
+	top: 0
+
+.main-head
+	min-height: 620px
+	background-size: cover
+	background-position: center
+	position: relative
+	padding-top: 45px
+	&::before
+		@extend .before
+		background-color: #394b5f
+		opacity: .85
+
+	h1
+		text-transform: none
