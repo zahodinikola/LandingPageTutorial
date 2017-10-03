@@ -17,6 +17,7 @@ body
 a, a:hover, a:focus, a:active
 	color: $main-color
 	text-decoration: underline
+	outline: none
 
 .headers
 	font-family: "PFCentroSlabProMedium", $helvetica
@@ -26,6 +27,7 @@ a, a:hover, a:focus, a:active
 
 h1, h2, h3, h4, h5, h6
 	@extend .headers
+	line-height: 1.375
 
 h1
 	font-size: 3em
@@ -38,7 +40,8 @@ h3
 
 b, strong
 	font-family: "RalewayBold", $helvetica
-
+	font-weight: 
+	
 .before
 	content: ""
 	width: 100%
@@ -47,12 +50,18 @@ b, strong
 	left: 0
 	top: 0
 
+.ulmnu
+	list-style-type: none
+	padding: 0
+	margin: 0
+	li
+		display: inline-block
+
 .main-head
 	min-height: 620px
 	background-size: cover
 	background-position: center
 	position: relative
-	padding-top: 45px
 	&::before
 		@extend .before
 		background-color: #394b5f
@@ -60,3 +69,51 @@ b, strong
 
 	h1
 		text-transform: none
+		line-height: 1.125
+
+.top-line
+	min-height: 160px
+	padding-top: 45px
+	background-image: url(../img/top_gradient.png)
+	background-repeat: repeat-x
+
+.logo
+	opacity: .95
+	img
+		width: 100px
+
+.main-mnu
+	font-size: .9375
+	li
+		line-height: 48px
+		padding: 0 10px
+		&.active
+			a
+				color: $main-color
+				text-decoration: underline
+		a:hover
+				color: $main-color
+				text-decoration: underline
+	ul
+		@extend .ulmnu
+	a
+		text-decoration: none
+		color:#fff
+
+.phone-wrap
+	position: relative
+	.phone
+		opacity: .9
+		color: #ffffff
+		font-family: "RobotoBold", $helvetica
+		font-size: 1.25
+		line-height: 48px
+		text-align: right
+		white-space: nowrap
+	.toggle-mnu
+		float: right
+		position: absolute
+		right: 0
+		top: 0
+		text-align: center
+		line-height: 48px
