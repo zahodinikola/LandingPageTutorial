@@ -1,4 +1,5 @@
 @import "bourbon"
+
 $main-color: #f39f18
 $headers-color: #2c3949
 
@@ -83,7 +84,7 @@ b, strong
 		width: 100px
 
 .main-mnu
-	font-size: .9375
+	font-size: .9375em
 	li
 		line-height: 48px
 		padding: 0 10px
@@ -106,7 +107,7 @@ b, strong
 		opacity: .9
 		color: #ffffff
 		font-family: "RobotoBold", $helvetica
-		font-size: 1.25
+		font-size: 1.25em
 		line-height: 48px
 		text-align: right
 		white-space: nowrap
@@ -117,3 +118,46 @@ b, strong
 		top: 0
 		text-align: center
 		line-height: 48px
+
+.toggle-mnu
+	display: block
+	width: 28px
+	height: 28px
+	margin-top: 14px
+
+.toggle-mnu span:after,
+.toggle-mnu span:before
+	content: ''
+	position: absolute
+	left: 0
+	top: 9px
+
+.toggle-mnu span:after
+	top: 18px
+
+.toggle-mnu span
+	position: relative
+	display: block
+
+.toggle-mnu span,
+.toggle-mnu span:after,
+.toggle-mnu span:before
+	width: 100%
+	height: 2px
+	background-color: #ffffff
+	transition: all .3s
+	backface-visibility: hidden
+	border-radius: 2px
+
+.toggle-mnu.on span
+	background-color: transparent
+
+.toggle-mnu.on span:before
+	transform: rotate(45deg) translate(-1px, 0px)
+
+.toggle-mnu.on span:after
+	transform: rotate(-45deg) translate(6px, -7px)
+
+.toggle-mnu.on + #menu
+	opacity: 1
+	visibility: visible

@@ -2,10 +2,33 @@
 
 /*==========  Desktop First Method  ==========*/
 
+
+	
+
+
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px)
 	.main-mnu
 		display: none
+		float: right
+		min-width: 295px
+		text-align: right
+		background-color: #1c242c
+		margin-top: 15px
+		ul
+			li
+				display: block
+				line-height: 0
+				padding: 0
+			a
+				display: block
+				line-height: 48px
+				padding: 0 20px
+				background-color: transparent
+				font-size: 1.125em
+				transition: all .5s ease
+				&:hover
+					background-color: #273646
 	.phone
 		padding-right: 63px
 
@@ -42,7 +65,19 @@
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
-	/**/
+	.phone-wrap
+		.phone
+			font-size: 1.125em
+			line-height: 34px
+			padding-right: 50px
+		.toggle-mnu
+			line-height: 34px
+			margin-top: 5px
+
+
+	.logo
+		img
+			width: 70px
 
 
 /* Custom, iPhone Retina */
@@ -59,16 +94,7 @@
 
 /* Extra Small Devices, Phones */
 @media only screen and (min-width : 480px)
-	.phone-wrap
-		.phone
-			font-size: 1.125
-			line-height: 34px
-		.toggle-mnu
-			line-height: 34px
-
-	.logo
-		img
-			width: 70px
+	/**/
 
 
 /* Small Devices, Tablets */
@@ -83,5 +109,6 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (min-width : 1200px)
-	/**/
+	.main-mnu
+		display: block !important
 
